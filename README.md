@@ -54,5 +54,9 @@ Confusion Matrix for models using DistilBERT
 ## Inference:
 - Given the training data, KNN, seems to be a good performer. Though the Transformer models out perform the word2vec based models, they are heavy and also slow in inference.
 - KNN also seems to perform well due to short sentences and since most of the questions in each category seem to be centered around some keywords. The word cloud also suggest the same. 
-- Inference.ipynb file under src directory can be used for inference on user data, by creating an instance of UtteranceClassifier.
- 
+- Inference.ipynb file under src directory can be used for inference on user data, by creating an instance of UtteranceClassifier. By default, it uses the KNN classifier, but can be modified by passing the right strings, as - 
+
+<i>
+classifier = UtteranceClassifier(num_features = 300, classifier = "KNN")<BR>
+prediction = classifier.gettag(sentence)
+ </i>
