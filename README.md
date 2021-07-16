@@ -20,7 +20,7 @@ Assignment:
 
 - Length of the longest question is 28 words. Most of the sentences are within 20 words. <IMG SRC="./images/Word Count.png">
 
-## Alternatives
+## Alternatives:
  
 The data provided was split into train and test (used for validation), and written to 2 CSV files - 4137 records for training and 460 records for validation, to be able to benchmark all models on same test data. Actual test accuracy can be identified at inference.
 
@@ -51,3 +51,8 @@ Confusion Matrix for models using DistilBERT
 <IMG SRC="./images/DistilBERT CM.png">
 <BR>
   
+## Inference:
+- Given the training data, KNN, seems to be a good performer. Though the Transformer models out perform the word2vec based models, they are heavy and also slow in inference.
+- KNN also seems to perform well due to short sentences and since most of the questions in each category seem to be centered around some keywords. The word cloud also suggest the same. 
+- Inference.ipynb file under src directory can be used for inference on user data, by creating an instance of UtteranceClassifier.
+ 
